@@ -1,6 +1,6 @@
 # EX01 Developing a Simple Webserver
 
-# Date:28/10/2024
+# Date:14/10/2024
 # AIM:
 To develop a simple webserver to serve html pages and display the configuration details of laptop.
 
@@ -21,6 +21,9 @@ Serving the HTML pages.
 Testing the webserver.
 ```
 # PROGRAM:
+from http.server import HTTPserver,BaseHTTPRequestHandler
+content="""
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,6 +122,18 @@ Testing the webserver.
     </div>
 </body>
 </html>
+"""
+class myhandler(BaseHTTPRequestHandler):
+   def do_GET(self):
+       print("request received")
+       self.send_response(200)
+       self.send_headers('content-type','text/html;charset=utf-8')
+       self.end_headers()
+       self.wfile.write(content.encode())
+server_address=('',8000)
+httpd=HTTPServer(server_address,myhandler)
+print("my webser is running...")
+httpd.serve_forever()
 ```
 
 # OUTPUT:
