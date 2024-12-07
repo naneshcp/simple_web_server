@@ -139,7 +139,8 @@ httpd.serve_forever()
 # OUTPUT:
 ![output01(web)](https://github.com/user-attachments/assets/bf115f7c-0f68-4820-80a3-db4af33ba384)
 
-![01(web)](https://github.com/user-attachments/assets/e51af7e3-7971-4290-8600-9fdf8d59f51a)
+![output01(web)cmd](https://github.com/user-attachments/assets/da7e376b-01df-491c-a891-9874140a6af0)
+
 
 
 
